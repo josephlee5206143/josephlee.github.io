@@ -5,9 +5,21 @@
     <style>
         body { margin: 0; overflow: hidden; }
         canvas { display: block; }
+        .center-text {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white; /* 如需其他颜色可自行调整 */
+  z-index: 9999; /* 保证在最上层 */
+  pointer-events: none; /* 不影响鼠标事件 */
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
     </style>
 </head>
 <body>
+     <div class="center-text">没事没事，再抽一根</div>
     <script type="x-shader/x-fragment" id="fragmentShader">
     #ifdef GL_ES
     precision mediump float;
